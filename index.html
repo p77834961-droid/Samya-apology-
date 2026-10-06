@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You — I'm Sorry</title>
+<style>
+:root{
+  --bg:#120d16; --card:#211522; --pink:#ff7aa8; --soft:#ffd7e5;
+  --text:#fff7fa; --muted:#cbb8c1; --accent:#ffb3ca;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family: Georgia, "Times New Roman", serif;
+  background:radial-gradient(circle at top,#3a1b30 0,#120d16 45%,#09070b 100%);
+  color:var(--text); overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.14;
+  background-image:radial-gradient(#fff 1px,transparent 1px);
+  background-size:32px 32px;
+}
+section{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:70px 20px;position:relative}
+.container{width:min(760px,100%);text-align:center}
+.kicker{letter-spacing:4px;text-transform:uppercase;color:var(--accent);font:600 12px Arial,sans-serif}
+h1{font-size:clamp(48px,12vw,92px);line-height:.95;margin:22px 0}
+h2{font-size:clamp(32px,8vw,54px);margin-bottom:20px}
+p{font-size:18px;line-height:1.75;color:var(--soft)}
+.hero p{max-width:590px;margin:0 auto}
+.heart{font-size:54px;animation:beat 1.4s infinite}
+@keyframes beat{50%{transform:scale(1.18)}}
+.btn{
+  display:inline-block;margin-top:34px;padding:15px 25px;border:1px solid #ff9fbd;
+  border-radius:999px;color:white;text-decoration:none;font:600 14px Arial,sans-serif;
+  transition:.25s;background:#ff6f9d22
+}
+.btn:hover{background:#ff6f9d55;transform:translateY(-2px)}
+.card{
+  background:#ffffff0d;border:1px solid #ffffff18;border-radius:28px;padding:30px;
+  backdrop-filter:blur(12px);box-shadow:0 20px 70px #0006;text-align:left
+}
+.card p{font-size:17px}
+.timeline{display:grid;gap:18px;margin-top:28px}
+.item{padding:22px;border-left:3px solid var(--pink);background:#ffffff08;border-radius:0 18px 18px 0}
+.item strong{display:block;color:var(--accent);font:600 13px Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
+.reveal{opacity:0;transform:translateY(25px);transition:1s}
+.reveal.show{opacity:1;transform:none}
+#letter .card{text-align:center}
+.letter{font-size:20px!important}
+.big{font-size:26px!important;color:white!important}
+.secret{margin-top:25px}
+#message{display:none;margin-top:25px}
+#message.show{display:block;animation:fade .8s}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+footer{padding:35px 20px;text-align:center;color:#8e7882;font:12px Arial,sans-serif}
+.float{position:fixed;bottom:-30px;font-size:20px;pointer-events:none;animation:float 7s linear infinite;opacity:0}
+@keyframes float{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.8}100%{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+.small{font:13px Arial,sans-serif;color:#9e8992;margin-top:18px}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container reveal">
+    <div class="heart">♥</div>
+    <div class="kicker">A little something I made for you</div>
+    <h1>I'm Sorry,<br><span style="color:#ff9fbd">Samya</span></h1>
+    <p>I didn't want to send you another ordinary “sorry” message. So I made you a small place on the internet instead.</p>
+    <a class="btn" href="#truth">Come with me ↓</a>
+  </div>
+</section>
+
+<section id="truth">
+  <div class="container reveal">
+    <div class="kicker">First, the truth</div>
+    <h2>I know I messed up.</h2>
+    <div class="card">
+      <p>
+        I could give you excuses. I could explain why I did what I did.
+        But an explanation doesn't erase the way it made you feel.
+        <br><br>
+        I am sorry for <b>the way I spoke to you yesterday evening, the way I dismissed your efforts, and the way I failed to accept and understand your way of expressing love</b>.
+        You deserved better from me in that moment.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container reveal">
+    <div class="kicker">No excuses</div>
+    <h2>What I should have done</h2>
+    <div class="timeline">
+      <div class="item">
+        <strong>Instead of reacting</strong>
+        <p>I should have slowed down, listened to you, and understood what you were actually feeling.</p>
+      </div>
+      <div class="item">
+        <strong>Instead of defending myself</strong>
+        <p>I should have taken responsibility without making you fight to prove that you were hurt.</p>
+      </div>
+      <div class="item">
+        <strong>Instead of promising everything</strong>
+        <p>I should have focused on changing the specific behaviour that hurt you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="letter">
+  <div class="container reveal">
+    <div class="kicker">A letter, not a text</div>
+    <h2>For you.</h2>
+    <div class="card">
+      <p class="letter">
+        Hey <b>Samya</b>,
+        <br><br>
+        I want to apologise for yesterday evening. I know I spoke too much, said things that hurt you, and handled the situation badly. I accept that it was my mistake.
+        <br><br>
+        I'm sorry for speaking to you rudely. I'm sorry for overlooking the effort you were making. I'm sorry for not accepting your behaviour and the way you express your love, just because it isn't always the way I expect it to be.
+        <br><br>
+        I understand why yesterday hurt you so much. In the middle of my own expectations, I made your efforts feel smaller than they actually were. You were putting in so much, and instead of making you feel appreciated, I made you feel like it wasn't enough.
+        <br><br>
+        And I know that probably hit one of your biggest insecurities — that no matter how much you try, somehow it will still fall short for me. You didn't deserve to feel that way because of my words.
+        <br><br>
+        I don't want to defend what I said. I was wrong. I should have seen your effort instead of focusing only on what I felt was missing.
+        <br><br>
+        <span class="big">I'm genuinely sorry, Samya.</span>
+        <br><br>
+        I can't change what I said yesterday, but I can be more careful about how I treat your efforts, your way of loving me, and your feelings from here.
+        <br><br>
+        — <b>Parth</b>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container reveal">
+    <div class="kicker">One last thing</div>
+    <h2>No pressure.</h2>
+    <p>I made this because I wanted to say it properly. You don't owe me an immediate reply, forgiveness, or anything else.</p>
+    <button class="btn secret" onclick="openMessage()">There is one more thing…</button>
+    <div id="message" class="card">
+      <p class="letter">
+        Whatever happens next, I hope you know this:
+        <br><br>
+        <b>You matter to me.</b>
+        <br><br>
+        And I'm going to let my actions say the rest.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>Made with intention, not just words. ♥</footer>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')});
+},{threshold:.15});
+reveals.forEach(x=>obs.observe(x));
+
+function openMessage(){
+  document.getElementById('message').classList.add('show');
+  burst();
+}
+function burst(){
+  for(let i=0;i<16;i++){
+    const el=document.createElement('div');
+    el.className='float'; el.textContent=Math.random()>.5?'♥':'✦';
+    el.style.left=Math.random()*100+'vw';
+    el.style.animationDelay=(Math.random()*.7)+'s';
+    el.style.animationDuration=(4+Math.random()*4)+'s';
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),8500);
+  }
+}
+</script>
+</body>
+</html>
